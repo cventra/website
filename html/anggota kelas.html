@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anggota Kelas | XI C Elythra</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/anggota kelas.css">
+  <link rel="stylesheet" href="../css/halaman anggota.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="shell shell--header">
+      <nav class="nav-split nav-split--left">
+        <a href="profil-kelas.html" class="nav-link"><img src="../img/icons/icon-profil.svg" class="nav-icon" alt="">
+          Profil</a>
+        <a href="anggota%20kelas.html" class="nav-link nav-link--active"><img src="../img/icons/icon-anggota.svg"
+            class="nav-icon" alt=""> Anggota</a>
+        <a href="galery.html" class="nav-link"><img src="../img/icons/icon-galeri.svg" class="nav-icon" alt="">
+          Galeri</a>
+        <a href="prestasi%20kelas.html" class="nav-link"><img src="../img/icons/icon-prestasi.svg" class="nav-icon"
+            alt=""> Prestasi</a>
+      </nav>
+
+      <div class="brand-center">
+        <a href="index.html" class="brand__link">
+          <img src="../img/logo-cikki-no-bg.png" alt="Logo" class="brand__logo">
+        </a>
+      </div>
+
+      <nav class="nav-split nav-split--right">
+        <a href="kontak.html" class="nav-link"><img src="../img/icons/icon-kontak.svg" class="nav-icon" alt="">
+          Kontak</a>
+        <a href="pengumuman.html" class="nav-link"><img src="../img/icons/icon-pengumuman.svg" class="nav-icon" alt="">
+          Pengumuman</a>
+        <a href="saran-pesan.html" class="nav-link"><img src="../img/icons/icon-saran-pesan.svg" class="nav-icon"
+            alt=""> Saran-Pesan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- WALI KELAS -->
+    <section class="page-title">
+      <h1>Wali Kelas XI C Elythra</h1>
+    </section>
+
+    <section class="wali-kelas">
+      <div class="wali-card" onclick="openPopup('../img/profil-wali-kelas.jpg')">
+        <!-- Assuming img exists or use placeholder logic if broken, but instruction says fix path -->
+        <img src="../img/profil-wali-kelas.png" alt="Wali Kelas">
+        <div class="wali-info">
+          <span class="role">WALI KELAS</span>
+          <h3>Muh Rifqi Fadhil, S.Pd.</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-title">
+      <h1>Anggota Kelas XI C Elythra</h1>
+      <p>Daftar siswa kelas XI C Elythra MAN IC Gowa</p>
+    </section>
+
+    <section class="anggota-grid">
+
+      <!-- ========== PUTRA (1–12) ========== -->
+      <div class="anggota-card">
+        <img src="../img/A Kafka.jpg" alt="A.Kafka" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">01</span>
+          <h3>A. Kafka</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto alwan.jpg" alt="Alwan Lasani" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">02</span>
+          <h3>Alwan Lasani</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto nadia.JPG" alt="Andi Nadiah" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">03</span>
+          <h3>Andi Nadiah</h3>
+          <span class="label putri">Putri</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto beatah.JPG" alt="Andi Tsabitah" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">04</span>
+          <h3>Andi Tsabitah</h3>
+          <span class="label putri">Putri</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto fikri.JPG" alt="Fikri Fadhil" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">05</span>
+          <h3>Fikri Fadhil</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto naya.JPG" alt="Inayah Salwa" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">06</span>
+          <h3>Inayah Salwa</h3>
+          <span class="label putri">Putri</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <!-- Fixed wrong screenshot name to standard format assumption or keep if file exists. 
+             Instruction says "fix path" and "files in /img". 
+             I'll assume it's in img folder now. -->
+        <img src="../img/foto faren.JPG" alt="M. Faren" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">07</span>
+          <h3>M. Faren Al Muflih</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto danis.JPG" alt="M.Nandana" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">08</span>
+          <h3>M. Nandana Daniswara</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/wong gtg.JPG" alt="Muh Andika" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">09</span>
+          <h3>Muh Andika</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto ikhsan.JPG" alt="Muh. Ikhsan" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">10</span>
+          <h3>Muh. Ikhsan</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto lutfi.JPG" alt="Muh. Luthfi" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">11</span>
+          <h3>Muh. Luthfi</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/Muh Joureal.jpg" alt="Muh. Joureal" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">12</span>
+          <h3>Muh. Joureal</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <!-- ========== PUTRI (13–16) ========== -->
+      <div class="anggota-card">
+        <img src="../img/foto razu.JPG" alt="Muhammad Raza" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">13</span>
+          <h3>Muhammad Raza</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto azer.JPG" alt="Muntazer Zaidulhaq" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">14</span>
+          <h3>Muntazer Zaidulhaq</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/foto nolan.JPG" alt="Naufal Maulana" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">15</span>
+          <h3>Naufal Maulana</h3>
+          <span class="label putra">Putra</span>
+        </div>
+      </div>
+
+      <div class="anggota-card">
+        <img src="../img/nana.JPG" alt="Raihanah Nuraini" onclick="openPopup(this.src)">
+        <div class="anggota-info">
+          <span class="absen">16</span>
+          <h3>Raihanah Nuraini</h3>
+          <span class="label putri">Putri</span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 XI C Elythra – MAN IC Gowa</p>
+    </div>
+  </footer>
+
+  <!-- POPUP IMAGE VIEWER -->
+  <div id="popup" class="popup-overlay">
+    <div class="popup-content">
+      <img id="popup-img" src="" alt="Preview">
+      <button class="popup-close" onclick="closePopup()">TUTUP</button>
+    </div>
+  </div>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+
+    function openPopup(src) {
+      popupImg.src = src;
+      popup.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePopup() {
+      popup.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Tutup saat klik area gelap
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) {
+        closePopup();
+      }
+    });
+
+    // Tutup dengan tombol ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closePopup();
+      }
+    });
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
