@@ -1,0 +1,115 @@
+/* Prestasi Kelas Styles */
+
+.prestasi-section {
+  padding: 0;
+  /* Handled by .main-content */
+  background: var(--white);
+}
+
+
+
+.prestasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD – Swiss Style */
+.prestasi-card {
+  border: 2px solid var(--black);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+  /* Changed background to all for smooth transform */
+  height: 100%;
+  cursor: pointer;
+
+  /* Entry Animation */
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Staggered Delay for Grid Items */
+.prestasi-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.prestasi-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.prestasi-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.prestasi-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.prestasi-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.prestasi-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.prestasi-card:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.prestasi-card:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+.prestasi-card:nth-child(n+9) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.prestasi-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--red);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.prestasi-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-bottom: 2px solid var(--black);
+}
+
+.prestasi-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.prestasi-info h2 {
+  font-size: 1.2rem;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.prestasi-info p {
+  font-size: 0.9rem;
+  color: var(--black);
+  margin-bottom: 0.2rem;
+}

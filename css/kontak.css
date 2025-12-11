@@ -1,0 +1,90 @@
+/* Kontak Page Styles */
+
+/* -------------------------
+   KONTEN
+-------------------------- */
+
+
+
+/* -------------------------
+   BOX INFORMASI
+-------------------------- */
+.info-box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--yellow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.info-box h3 {
+  color: var(--black);
+  margin: 12px 0 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* -------------------------
+   FORM
+-------------------------- */
+.judul-form {
+  font-size: 1.9rem;
+  color: var(--black);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.form-kontak {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--grey-light);
+  font-family: inherit;
+}
+
+.form-kontak textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-kontak button {
+  padding: 12px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 16px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.form-kontak button:hover {
+  background: var(--red);
+}
+
+.ig-link {
+  color: var(--red);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ig-link:hover {
+  text-decoration: underline;
+}

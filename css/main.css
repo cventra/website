@@ -1,0 +1,647 @@
+/* ================================
+   SWISS STYLE – XI C ELYTHRA
+   Theme: White, Clean, Bold, Red/Yellow Accents
+   Main Stylesheet
+================================ */
+
+/* Import Hanken Grotesk (HK Grotesk equivalent) */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&display=swap');
+
+/* ----- VARIABEL GLOBAL ----- */
+:root {
+  /* Palette Swiss Style */
+  --white: #ffffff;
+  /* Putih Bersih */
+  --black: #111111;
+  /* Hitam Pekat */
+  --grey: #757575;
+  /* Abu-abu Teks */
+  --grey-light: #f5f5f5;
+
+  --red: #e53935;
+  /* Aksen Merah Bold */
+  --red-dark: #c62828;
+  /* Merah Gelap untuk Hover */
+  --yellow: #fbc02d;
+  /* Aksen Kuning Bold */
+
+  --border-color: #e0e0e0;
+  /* Abu Lembut */
+
+  /* Alias for Semantic Usage */
+  --bg-color: var(--white);
+  --text-main: var(--black);
+
+  --card-bg: var(--white);
+  --card-hover-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+
+  /* Layout & Spacing */
+  --max-width: 1120px;
+  --header-height: 80px;
+  --gap: 24px;
+  --radius: 4px;
+
+  /* Typography */
+  --font-sans: 'Hanken Grotesk', Helvetica, sans-serif;
+}
+
+/* ----- RESET & BASE ----- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* Sticky Footer Setup */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ----- CONTAINER SYSTEM ----- */
+.container,
+.shell,
+.sp-container,
+.kontak-container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+/* ----- HEADER STANDAR ----- */
+.site-header {
+  background-color: var(--bg-color);
+  border-bottom: 2px solid var(--border-color);
+  /* Garis tegas tipis */
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner,
+.shell--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* LOGO IMAGE STYLE */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand__logo {
+  height: 48px;
+  /* Ukuran pas untuk header */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ----- NAVBAR STANDAR ----- */
+.nav-main,
+.nav {
+  display: flex;
+  gap: 2rem;
+  /* Whitespace lebih lega */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* Tracking lebar khas Swiss Style */
+  color: var(--text-main);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  color: var(--red);
+}
+
+/* Active State */
+.nav-link--active,
+.nav-link.active {
+  color: var(--red);
+}
+
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--yellow);
+  /* Garis bawah kuning kontras */
+}
+
+/* ----- FOOTER STANDAR ----- */
+.site-footer {
+  margin-top: 5rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  background-color: var(--bg-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--grey);
+}
+
+/* ----- UTILITIES & COMPONENTS ----- */
+
+/* Button */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--text-main);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--text-main);
+  border-radius: var(--radius);
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+/* Card General */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  /* Radius kecil */
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--text-main);
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* GridUtilities (Existing) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+
+/* ----- GLOBAL PAGE LAYOUT & HEADER ----- */
+.main-content {
+  padding-block: 4rem;
+  min-height: 60vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.page-header__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.page-header__lead {
+  font-size: 1.1rem;
+  color: var(--grey);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-main {
+    gap: 1.2rem;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .grid-3,
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    /* Force stack on mobile */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ====================== HEADER STANDARD (CENTERED) ====================== */
+.site-header {
+  background: #fff;
+  border-bottom: 2px solid var(--border-color);
+  /* Re-enforce border */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-block: 0.5rem;
+  /* Entry Animation */
+  animation: slideDown 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.shell--header {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 1rem;
+  gap: 2rem;
+}
+
+.brand-center {
+  flex-shrink: 0;
+}
+
+.brand__link {
+  display: block;
+}
+
+/* Logo Animation */
+.brand__logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Bouncy transition */
+}
+
+.brand__link:hover .brand__logo {
+  transform: scale(1.1) rotate(-3deg);
+  filter: drop-shadow(0 10px 15px rgba(230, 38, 63, 0.2));
+}
+
+/* Nav Split */
+.nav-split {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+/* Nav Link Underline Animation */
+.nav-link {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: .02em;
+  padding: .35rem .5rem;
+  border-radius: 4px;
+  transition: color .2s ease;
+  /* Fixed alignment */
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  /* Reduced gap for compact look */
+  position: relative;
+  /* For pseudo-element */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #E6263F;
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 80%;
+  /* Expand underline */
+  left: 10%;
+}
+
+.nav-link:hover {
+  color: #E6263F;
+}
+
+.nav-icon {
+  height: 1.15em;
+  /* Slightly smaller */
+  width: auto;
+  /* Removed layout hacks, handled by flex parent */
+  transition: transform 0.2s ease;
+}
+
+/* Nav Icon Wiggle Animation */
+.nav-link:hover .nav-icon {
+  animation: iconWiggle 0.4s ease-in-out;
+  color: #E6263F;
+  /* Ensure icon takes color too if svg allows (usually fill needs handling) */
+}
+
+@keyframes iconWiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nav-link--active {
+  color: #E6263F;
+  font-weight: 700;
+  background: transparent;
+}
+
+/* Responsive Header Override */
+@media (max-width: 900px) {
+  .shell--header {
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 1rem;
+  }
+
+  .brand-center {
+    order: -1;
+  }
+
+  .nav-split {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .brand__logo {
+    height: 42px;
+  }
+}
+
+/* ====================== TYPEWRITER FULLSCREEN HERO ====================== */
+.hero-typewriter {
+  min-height: calc(100vh - 85px);
+  /* Fills the viewport minus header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centers the container horizontally */
+  justify-content: center;
+  background: var(--white);
+  padding: 2rem;
+  border-bottom: 2px solid var(--black);
+  /* The single separator line */
+}
+
+.shell--typewriter {
+  /* Fits content width so subtitle aligns to title's left edge */
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 100%;
+}
+
+/* Big Title C'VENTRA */
+.hero-tv-title {
+  font-size: 17vw;
+  /* Adjusted to 17vw */
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: var(--black);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-top: -2rem;
+  text-align: center;
+}
+
+/* Stylized C Logo approximation */
+.c-logo {
+  display: inline-block;
+  color: var(--black);
+  position: relative;
+  margin-right: 0;
+}
+
+/* Subtitle with Typing */
+.hero-tv-subtitle {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Aligns left to the container start */
+  gap: 0.6rem;
+  margin-left: 0.5vw;
+}
+
+.typing-text {
+  color: var(--red);
+  /* Highlight color */
+  font-weight: 800;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  /* Standard height */
+  background-color: var(--black);
+  /* Back to black pipe */
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ====================== SECTION ABOUT (OLD HERO MOVED) ====================== */
+.section-about {
+  padding-block: 5rem;
+  background: var(--white);
+}
+
+/* Re-adding structural styles for the moved About section */
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  align-items: center;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.hero__text {
+  max-width: 640px;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Buttons */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: .6rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  transition: 0.2s;
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: var(--black);
+  border: 2px solid var(--yellow);
+}
+
+.btn-primary:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--black);
+  border: 2px solid var(--border-color);
+}
+
+.btn-ghost:hover {
+  border-color: var(--black);
+}
+
+@media (max-width:880px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+}

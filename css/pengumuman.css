@@ -1,0 +1,173 @@
+/* Styling untuk halaman Pengumuman */
+.pengumuman {
+  padding: 0;
+  /* Handled by .main-content */
+}
+
+
+
+.form-container {
+  background-color: var(--white);
+  padding: 20px;
+  /* Further reduced from 24px */
+  border: 2px solid var(--black);
+  border-radius: var(--radius);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+  /* Increased margin for separation */
+  max-width: 900px;
+  /* Widened again */
+  margin-inline: auto;
+  /* Center it */
+}
+
+.pengumuman-form label {
+  font-size: 0.95rem;
+  /* Slightly smaller */
+  font-weight: bold;
+  color: var(--black);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pengumuman-form input,
+.pengumuman-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  /* Reduced vertical padding */
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  /* Reduced from 16px */
+}
+
+.pengumuman-form input:focus,
+.pengumuman-form textarea:focus {
+  border-color: var(--red);
+  outline: none;
+}
+
+.btn-submit {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: var(--red);
+}
+
+/* Styling untuk radio button pilihan pengirim */
+/* Styling untuk radio button pilihan pengirim */
+.pengirim {
+  margin-bottom: 20px;
+  border: none;
+  padding: 0;
+  margin-top: -0.5rem;
+  /* Lift it up a bit */
+}
+
+.pengirim legend {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.pengirim-options {
+  /* Wrapper if needed, or just flex the labels */
+  display: flex;
+  gap: 20px;
+}
+
+.pengirim label {
+  font-size: 0.95rem;
+  color: var(--black);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  /* Space between radio and text */
+}
+
+.pengirim input[type="radio"] {
+  width: auto;
+  /* Reset width from 100% */
+  margin: 0;
+}
+
+/* Daftar Pengumuman */
+.daftar-pengumuman h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  margin-top: 40px;
+}
+
+.daftar-pengumuman ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.daftar-pengumuman li {
+  padding: 20px;
+  background-color: var(--white);
+  margin-bottom: 15px;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--black);
+  border-radius: var(--radius);
+  /* Animation */
+  opacity: 0;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.daftar-pengumuman li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.daftar-pengumuman li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.daftar-pengumuman li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.daftar-pengumuman li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.daftar-pengumuman li h3 {
+  font-size: 1.3rem;
+  /* Slightly reduced for better fit */
+  font-weight: bold;
+  color: var(--black);
+  display: flex;
+  /* Align icon */
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.daftar-pengumuman li p {
+  font-size: 1rem;
+  color: var(--grey);
+}
